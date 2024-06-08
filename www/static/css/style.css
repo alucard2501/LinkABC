@@ -1,0 +1,365 @@
+/* =======================================================
+ *  内容区域
+ * ======================================================= */
+ .main{
+    width: 100%;
+    top: 49px;
+    position: absolute;
+    z-index: 0;
+    overflow:hidden;
+    height:calc(100% - 113px);
+}
+.mainUser{
+    height:calc(100% - 64px);
+    top:0px;
+}
+.mainLogic{
+    /* top:0px;
+    height:calc(100% - 64px); */
+}
+:focus{
+    outline: transparent;
+}
+/* .slide-right-enter-active,
+.slide-right-leave-active,
+.slide-left-enter-active,
+.slide-left-leave-active {
+  will-change: transform;
+  transition: all 200ms;
+  position: absolute;
+}
+.slide-right-enter {
+  opacity: 0;
+  transform: translate3d(-100%, 0, 0);
+}
+.slide-right-leave-active {
+  opacity: 0;
+  transform: translate3d(100%, 0, 0);
+}
+.slide-left-enter {
+  opacity: 0;
+  transform: translate3d(100%, 0, 0);
+}
+.slide-left-leave-active {
+  opacity: 0;
+  transform: translate3d(-100%, 0, 0);
+} */
+.el-tabs__item{
+    padding:0 10px;
+}
+.el-tabs__nav-wrap{
+    overflow:visible;
+}
+.el-tabs__header{
+    margin-bottom: 0px;
+}
+.picker-item.picker-selected{
+    color:#f08519;
+}
+.picker-item{
+    color:#f0f0f0;
+}
+.ulSelectType{
+    margin: 0px;
+    padding: 0px;
+}
+.ulSelectType li{
+    float: left;
+    list-style: none;
+}
+.divSelectType{
+    border:1px solid #c1c1c1;
+    width:100px;
+    height:100px;
+    margin-top: -1px;
+    margin-left: -1px;
+    text-align:center;
+    line-height: 100px;
+    font-size: 2em;
+    color:#c1c1c1;
+}
+.divLoginTitle{
+    font-size: 2.5em;
+    color: #fff;
+    margin-bottom:40px;
+}
+.el-dialog__body{
+    padding:10px 20px;
+}
+.divPreviewGroup{
+    height:180px;
+    width:80%;
+    margin-left:10%;
+    margin-bottom:10px;
+}
+.divPreviewGroup ul{
+    width:100%;
+    margin-block-start:0px;
+    padding-inline-start:0px;
+}
+.divPreviewGroup li{
+    height:45px;
+    list-style: none;
+    float: left;
+    border: #c1c1c1 1px solid;
+    width:49%;
+    text-align:center;
+    margin-left:-1px;
+}
+.divCheckBoxGroup{
+    height:20px;
+    width:80%;
+    margin-left:10%;
+    margin-bottom:10px;
+}
+.divPreviewTop{
+    width: 100%;
+    text-align: left;
+    font-size: 10px;
+    height:12px;
+    line-height:12px;
+    padding-left: 5px;
+}
+.divPreviewContent{
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    height: 30px;
+}
+.divCheckBoxGroup ul{
+    width:100%;
+    margin-block-start:0px;
+    padding-inline-start:0px;
+}
+.divCheckBoxGroup li{
+    height:25px;
+    line-height: 25px;
+    list-style: none;
+    float: left;
+    border: #c1c1c1 1px solid;
+    width:calc(12.5% - 1px);
+    text-align:center;
+    margin-left:-1px;
+}
+.divCheckBoxGroup .select{
+    background-color: rgb(233, 121, 56);
+    color:#fff;
+}
+.divForm{
+    width:calc(90vw - 20px);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left:5%;
+    padding:10px;
+    background-color: #fff;
+    border-radius:5px;
+}
+.divForm .el-form-item__label{
+    padding-bottom: 0px;
+}
+.divForm ul{
+    margin-block-start:0px;
+    margin-block-end:0px;
+    padding-inline-start:0px;
+}
+.divForm li{
+    list-style: none;
+    border:1px solid #e3e1e1;
+    margin-top:-1px;
+    padding:5px;
+    height:28px;
+}
+.divForm .divIcon{
+    float:right;
+}
+.divFormList{
+    padding:10px;
+    background-color: #fff;
+    height:100%;
+}
+.divFormList .el-form-item__label{
+    padding-bottom: 0px;
+}
+.divFormList ul{
+    margin-block-start:0px;
+    margin-block-end:0px;
+    padding-inline-start:0px;
+}
+.divFormAndList li{
+    list-style: none;
+    border:1px solid #e3e1e1;
+    margin-top:-1px;
+    padding:5px;
+    height:28px;
+}
+.ulFloorEdit li{
+    list-style: none;
+    border-top:none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 1px #e3e1e1;
+    margin-top:-1px;
+    padding:5px 18px 5px 15px;
+    height:28px;
+}
+.ulFloorEdit li:last-child{
+    border-bottom: none;
+}
+.divFormList ul:first-child{
+    border:none;
+}
+
+.divFormList .divIcon{
+    float:right;
+}
+.divFormList i{
+    font-size: 16px;
+}
+.divFormSceneEdit{
+    width:100vw;
+    padding:10px 0 10px 10px;
+    background-color: #f2f2f2;
+    height:calc(100% - 20px);
+    overflow-y:scroll;
+}
+.divFormSceneEdit .panel{
+    margin-top:20px;
+    width:calc(90vw - 10px);
+    background-color:#ffffff;
+    border:1px solid #d0d0d0;
+    border-radius:5px;
+    padding:10px;
+    box-shadow:2px 2px 5px #d4d4d4;
+}
+.divFormSceneEdit .panelItem{
+    width:100%;
+    height:30px;
+    border-top:1px solid #c1c1c1;
+    padding-top: 10px;
+    color:#424242;
+}
+.divFormSceneEdit .panelItem:first-child{
+    border:none;
+    padding-top:0px;
+    color:#000000;
+}
+.panelLabel{
+    width:30%;
+    float:left;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    -o-text-overflow:ellipsis;
+    overflow:hidden;
+}
+.panelValue{
+    width:60%;
+    text-align: right;
+    float:left;
+}
+.divFormSceneEdit .el-input__inner,.panelItem .el-input__inner{
+    border:none;
+  }
+.divFormSceneEdit ul{
+    margin-block-start:0px;
+    margin-block-end:0px;
+    padding-inline-start:0px;
+}
+.divFormSceneEdit li{
+    list-style: none;
+    margin-top:-1px;
+    padding:5px;
+}
+.divFormSceneEdit .divIcon{
+    float:right;
+}
+.divFormSceneEdit .footerBar{
+    width:93vw;
+    margin-top: 20px;
+    line-height:28px;
+}
+.divScanResult li{
+    height:60px;
+}
+.divScanResult .divFirstSummary{
+    position:absolute;
+    width:90%;
+}
+.divScanResult .divSecondSummary{
+    position:absolute;
+    width:50%;
+    margin-top: 20px;
+}
+.divScanResult .divThirdSummary{
+    position:absolute;
+    width:70%;
+    margin-top: 40px;
+}
+.divScanResult .divIcon{
+    float:right;
+    line-height: 60px;
+    height:60px;
+}
+.liAdd{
+    text-align: center;
+    background:#f08519;
+    color:#ffffff;
+}
+.divCondAct{
+    border:1px solid #DCDFE6;
+    border-radius:5px;
+    font-size:12px;
+    padding-left:10px;
+    color:#606266;
+}
+.divPlus{
+    float: right;
+    margin-top:-5px;
+    font-size:20px;
+    color:#606266;
+    width:20px;
+    text-align: right;
+}
+.divFormTitle{
+    width: 100%;
+    color:#606266;
+    margin-bottom: 10px;
+}
+.groupbox{
+    border:thin solid #e3e1e1;
+    padding:10px;
+    margin-top:30px;
+    border-radius: 5px;
+}
+.groupTitle{
+    display:block;
+    margin-top:-24px;
+    width:60px;
+    text-align:center;
+    background-color:white;
+    color:#606266;
+}
+.groupPlus{
+    display:block;
+    margin-top:-24px;
+    margin-left:65vw;
+    width:30px;
+    text-align:center;
+    background-color:white;
+    color:#606266;
+    font-size: 20px;
+}
+.groupLi{
+    list-style:none;
+    border-bottom:1px solid #e3e1e1;
+    margin-top:-1px;
+    padding:0px 5px 0px 5px;
+    height:55px;
+}
+.groupLi .spanSceneTitle{
+    display: block;
+    width: 80%;
+    height:55px;
+    line-height: 55px;
+    float: left;
+
+}

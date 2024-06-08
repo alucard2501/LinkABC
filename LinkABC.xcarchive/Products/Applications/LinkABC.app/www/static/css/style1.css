@@ -1,0 +1,2170 @@
+
+/* =======================================================
+ *  基本框架
+ * ======================================================= */
+ *:not(input,textarea) {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none; /* Disable selection/Copy of UIWebView */
+}
+body{
+    margin: 0;
+    padding: 0;
+    /* background: #f3f3f3 url('../images/bg.jpg') no-repeat;
+    background-size:cover; */
+    background-color:#252523;
+    /* height:100vh; */
+}
+a {
+    color:#f08519;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+a:hover, a:active, a:focus {
+    color: #f08519;
+    outline: none;
+    text-decoration: none;
+}
+p {
+    margin-bottom: 20px;
+}
+h1, h2, h3, h4, h5, h6, figure {
+    color: #000;
+    font-family: "微软雅黑", Arial, sans-serif;
+    font-weight: 400;
+    margin: 0 0 20px 0;
+}
+.el-loading-mask{
+    font-size: 3em;
+}
+
+/* =======================================================
+ *  页头
+ * ======================================================= */
+ .header{
+    width:100%; 
+    height: 29px;
+	left:0;
+	top:0; 
+	padding: 10px 0 10px 0;
+	color:#fff;
+	position: absolute;
+	z-index: 1;
+}
+.divHeaderLeft{
+    width: 86%;
+    float: left;
+    overflow: hidden;
+    height:35px;
+    line-height: 35px;
+}
+.btnHeader{
+    float: left;
+    margin-top: 5px;
+}
+.btnHeader i{
+    font-size: 1.2em;
+}
+.divHeaderMain{
+    width: 90%;
+    left:5%;
+    padding-top: 1px;
+    position: absolute;
+    text-align: left;
+    height:35px;
+    line-height: 35px;
+}
+.btnHeaderMain{
+    margin: 0;
+    padding: 0px;
+    border: none;
+    background: none;
+    color: #fff;
+}
+.btnHeaderMain span{
+    font-size: 5.5vw;
+    font-weight: 600;
+}
+.btnHeaderMain i{
+    font-size: 0.8em;
+}
+.imgHeaderLogo{
+    width: 100%;
+}
+.spanHeaderTitle{
+    font-size: 5.5vw;
+    font-weight: 600;
+    display:block;
+    margin-top:-2px;
+}
+.divHeaderRight{
+    width: 25vw;
+    /* float: right; */
+    height:37px;
+    line-height: 37px;
+    text-align: center;
+}
+.btnHeaderFloor{
+    margin: 0;
+    border: none;
+    background: none;
+    color: #fff;
+    text-align: right;
+}
+.btnHeaderFloor span{
+    font-size: 4vw;
+    font-weight: 600;
+}
+.btnHeaderFloor i{
+    font-size: 1.1em;
+}
+
+.divHeaderRight .el-button:focus, .divHeaderRight .el-button:hover{
+    background: none;
+}
+.divHeaderMain .el-button:focus, .divHeaderRight .el-button:hover{
+    background: none;
+}
+.divNormalTop{
+    overflow: hidden;
+    color:#fff;
+    height:85px;
+    margin-top:35px;
+}
+.divNormalTop ul{
+    margin-block-start:0px;
+    padding-inline-start:0px;
+    padding-left: 5vw;
+}
+.divNormalTop li{
+    list-style:none;
+    float:left;
+    font-size:13px;
+    width:18vw;
+    text-align: center;
+    height:18vw;
+    margin-left:6vw;
+    margin-right: 6vw;
+    border-radius: 9vw;
+    background-color: #fff;
+    color:#000;
+  }
+  .divNormalTop i{
+    font-size:7vw;
+    width:15vw;
+    height:9vw;
+    line-height: 14vw;
+  }
+  
+.divSecureTop{
+    overflow: hidden;
+    color:#fff;
+    height:85px;
+    margin-top:35px;
+}
+.divSecureTop ul{
+    margin-block-start:0px;
+    padding-inline-start:0px;
+    padding-left: 5vw;
+}
+  .divSecureTop li{
+    list-style:none;
+    float:left;
+    font-size:13px;
+    width:18vw;
+    text-align: center;
+    height:18vw;
+    margin-left:6vw;
+    margin-right: 6vw;
+    border-radius: 9vw;
+    background-color: #fff;
+    color:#000;
+  }
+  .divSecureTop i{
+    font-size:7vw;
+    width:15vw;
+    height:9vw;
+    line-height: 14vw;
+  }
+.el-popper[x-placement^=bottom] .popper__arrow{
+    border-bottom-color: #867e7d; 
+}
+.el-popper[x-placement^=bottom] .popper__arrow:after {
+    border-bottom-color: #2f2726;
+}
+.popoverLogic{
+    background: rgba(222,222,222,0.95);
+    border:0px solid #707070;
+}
+.popoverFloor{
+    background: #2f2726;
+    background: rgba(47,39,38,0.95);
+    border: solid 1px #2f2726;
+    color:#dfdfdf;
+    border-radius: 10px;
+}
+.popoverFloor .spanTitle{
+    color: #fff;
+    font-size: 1em;
+}
+.popoverFloor ul{
+    margin: 0;
+    margin-top: 10px;
+    padding: 0;
+    list-style-type: none;
+}
+.popoverFloor ul li{
+    padding: 15px 5px;
+    border-bottom: solid 1px #373737;
+}
+.popoverFloor ul li:last-child{
+    border-bottom: none;
+}
+.popoverFloor ul li span{
+    margin-right: 15px;
+    padding-left: 2px;
+}
+.popoverFloor ul li i{
+    margin-right: 15px;
+}
+.popoverFloor ul li .checked{
+    margin-right: 0;
+    float: right;
+}
+.popoverFloor ul li .checked i{
+    margin-right: 0;
+    color: #f08519;
+    font-size: 1.2em;
+}
+.popoverFloor ul li.liBlue{
+    color:#3b91f3;
+}
+.popoverFloor ul li.liOrange{
+    color:#f08519;
+}
+.btnHeaderBack{
+
+}
+.btnHeaderBack i{
+    font-size: 5.5vw;
+}
+.btnHeaderShare{
+    /* float: right; */
+    /* margin-right:5vw; */
+}
+.btnHeaderShare i{
+    font-size: 5.5vw;
+}
+.drawerShare{
+    background: #2f2726;
+    color:#dfdfdf;
+    outline: none;
+    width:100%;
+    height:100%;
+}
+.drawerShare span{
+    color: #7d7d7d;
+    font-size: 0.8em;
+    outline: none;
+}
+.divShareImg{
+    width: 70%;
+    margin: 0 auto;
+}
+.divShareImg img{
+    width: 100%;
+}
+
+/* =======================================================
+ *  页脚
+ * ======================================================= */
+ .footer{
+	width:100%; 
+    height:48px;
+	left:0;
+	bottom: 0; 
+	padding: 0px 0 6px 0;
+	color:#fff;
+	position: fixed;
+	z-index: 1;
+	overflow: hidden;
+}
+.footer ul{
+	width:100%; 
+	margin: 0;
+	padding: 0;
+	list-style-type: none; 
+}
+.footer ul li{
+	width:33%;
+    text-align: center;
+	float: left;
+}
+.footer ul li i{
+	margin-bottom: 3px;
+	color:#fff;
+	font-size: 25px;
+	display: block;
+    line-height:40px;
+}
+.footer ul li span{
+	color: #fff;
+	font-size: 0.8em;
+	display: block;
+}
+.footer ul li .routerC i{
+	color:#f08519;
+}
+.footer ul li .routerC span{
+	color:#f08519;
+}
+
+
+
+/* =======================================================
+ *  内页 - room/favorite
+ * ======================================================= */
+ .divWeather{
+    padding-left: 20px;
+    color:#9f9f9f;
+    height:30px;
+    margin-top: 7px;
+ }
+ .divRoomTop{
+    width: 96%;
+    padding: 0 2%;
+    overflow-x: scroll;
+    overflow-y:hidden;
+    height:35px;
+    position:absolute;
+    top:45px;
+ }
+ .divRoomTop::-webkit-scrollbar {
+    display: none; /* Chrome Safari */
+}
+ .divRoomTop ul{
+    margin: 0;
+	padding: 0;
+	list-style-type: none; 
+}
+.divRoomTop ul li{
+    padding: 5px 10px;
+    font-size: 17px;
+    font-weight: 600;
+    color:#fff;
+    float: left;
+}
+.divRoomTop ul li.liRoomTopC{
+    color:#3b91f3;
+}
+.divRoomTop ul li.liRoomTopBlue{
+    color:#f08519;
+}
+
+.divRoomTop2{
+   width: 92%;
+   padding: 0 4%;
+   overflow-x: auto;
+   overflow-y: hidden;
+   height:40px;
+   line-height: 40px;
+}
+.divRoomTop2 ul{
+   margin: 0 0 0 -10px;
+   padding: 0;
+   list-style-type: none; 
+}
+.divRoomTop2 ul li{
+   padding: 0px 16px;
+   font-size: 18px;
+   color:#fff;
+   float: left;
+   height:40px;
+   line-height: 40px;
+}
+.divRoomTop2 ul li.liRoomTopC i{
+   color:#3b91f3;
+}
+.divRoomTop2 ul li.liRoomTopBlue i{
+   color:#f08519;
+}
+
+.divRoom{
+    width: 100%;
+    padding-bottom: 2px;
+    touch-action: pan-y!important; 
+    height:calc(100% - 85px);
+    position: absolute;
+    overflow-y:scroll;
+    top:85px;
+    border-top:1px solid #f08519
+}
+.divRoomGallery .divView{
+    width: 100%;
+}
+.divRoomList .divView{
+    width: 92%;
+    background-color: rgba(47,39,38,0.8);
+    padding:0 5% 0 3%;
+    border-bottom:solid 1px rgba(255, 255, 255, 0.2);
+}
+.divView{
+    
+    margin: 0 auto;
+    overflow: hidden;
+    touch-action: pan-y!important; 
+}
+.btnGallery, .btnList{
+    padding: 10px 2%;
+    color: #fff;
+    float: right;
+}
+.divDeviceCount{
+    padding: 10px 2%;
+    color: #FFF;
+    float: left;
+    font-size:4vw;
+    font-weight: bolder;
+}
+.btnViewC{
+    color: rgba(240,133,25,0.8);
+}
+
+.divRoomContent{
+    width: 100vw;
+    margin: 0 auto;
+    overflow: auto;
+    
+    touch-action: pan-y!important;
+}
+.divDeviceSelected{
+    
+}
+.divRoomGallery{
+    /* margin-top: -15px; */
+    /* padding:0 5% 0 5%; */
+}
+.divSceneRow{
+    width:90vw;
+}
+.ulSceneRow{
+    margin-block-start:0px;
+    padding-inline-start:0px;
+    margin-block-end:0px;
+    list-style: none;
+}
+.ulSceneRow li{
+    float:left;
+    width:40vw;
+}
+.ulSceneRow li:nth-child(odd){
+    margin-right:7.5vw;
+}
+.divRoomGallery .divDevice{
+    width: calc(45vw - 2px);
+    margin-bottom: 3px;
+    padding: 5px 2.5vw 3px 2.5vw;
+    /* border: solid 1px #fff; */
+    /* border-radius: 18px; */
+    overflow: hidden;
+    touch-action: pan-y!important;
+    position: relative;
+    height:80px;
+    background-color: #3c3d3f;
+    float: left;
+}
+.divRoomGallery .divDeviceSelect{
+    background-color:rgba(240,133,26,0.3);
+}
+.divRoomGallery .divDeviceCondition{
+    background-color:rgba(57,129,214,0.4);
+}
+.divRoomGallery .divDevice:nth-child(odd){
+    margin-right: 0;
+    margin-left: 3px;
+}
+.divRoomGallery .divDevice span{
+    text-align: left;
+}
+.divRoomGallery .divDevice .divFavorite{
+    width: 20px;
+    display: block;
+    height:29px;
+    line-height: 13px;
+    text-align: right;
+    float:right;
+    margin:0px 26px 0px 0px;
+}
+.divRoomGallery .divDevice .divFavorite i{
+    font-size: 9px;
+}
+.divRoomGallery .divDevice .divIcon{
+    margin: 0px 0 0 20px;
+    color: #fff;
+    text-align: center;
+    width:11vw;
+    float:left;
+    height:27px;
+}
+.divRoomGallery .divDevice .divIcon i{
+    font-size: 25px;
+}
+.divRoomGallery .divDevice .divInfo{
+    overflow: hidden;
+    margin:0 0 0 10px;
+    width:24vw;
+    float:left;
+    height:65px;
+    line-height: 65px;
+}
+.divRoomGallery .divDevice .spanDeviceName{
+    color:#fff;
+    font-size: 15px;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    -o-text-overflow:ellipsis;
+    overflow:hidden;
+    height:16px;
+    line-height: 16px;
+    float:left;
+}
+.divRoomGallery .divDevice .spanDeviceNameScene{
+    height:27px;
+    line-height:27px;
+}
+.divRoomGallery .divDevice .spanDeviceNameOther{
+    /* height:27px;
+    line-height:27px; */
+}
+.divRoomGallery .divDevice .spanDeviceNameIcon{
+    width:30vw;
+}
+.divRoomGallery .divDevice .spanDeviceNameNoIcon{
+    width:41vw;
+}
+.divRoomGallery .divDevice .spanDeviceNameEditingIcon{
+    width:22vw;
+}
+.divRoomGallery .divDevice .spanDeviceNameEditingNoIcon{
+    width:30vw;
+}
+.divRoomGallery .divDevice .spanDeviceSummary{
+    height: 18px;
+    color:#9f9f9f;
+    font-size: 0.75em;
+    width:32vw;
+}
+.divRoomGallery .divDevice .divControl{
+    width: calc(100% - 10px);
+    text-align: center;
+    float:right;
+    margin-left:20px;
+    margin-right:5px;
+    height:22px;
+    margin-bottom: 3px;
+}
+.divRoomGallery .divDevice .divControlFolder{
+    margin-top: -13px;
+}
+.divRoomGallery .divDevice .iconC{
+    color:#f08519;
+}
+.divRoomGallery .divDevTopLight{
+    height:50px;
+    padding-top:22px;
+    margin-left: -20px;
+    width:calc(100% + 30px);
+    color:#fff;
+    margin-top:0px;
+}
+.divRoomGallery .divDevTop{
+    height:40px;
+    margin-left: -20px;
+    width:calc(100% + 30px);
+    color:#fff;
+    margin-top:7px;
+}
+.divRoomGallery .divDevTopScene{
+    height:48px;
+    padding-top:24px;
+    margin-top:0px;
+    margin-left: -20px;
+    width:calc(100% + 30px);
+    color:#fff;
+}
+.divRoomGallery .divDevTopWithIcon{
+    margin-left:15px;
+}
+.divRoomList{
+    width:100%;
+}
+.divRoomList .divDevice{
+    width: 90%;
+    padding: 10px 1% 10px 9%;
+    background: rgba(47,39,38,0.8);
+    border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    touch-action: pan-y!important; 
+}
+.divRoomList .divDevice:nth-child(even){
+    margin-right: 0
+}
+.divRoomList .divDevice span{
+    display: block;
+}
+.divRoomList .divDevice .divFavorite{
+    width: 3%;
+    margin-top: 6px;
+    float: left;
+}
+.divRoomList .divDevice .divFavorite i{
+    color:#fff;
+    font-size: 0.6em;
+}
+.divRoomList .divDevice .divIcon{
+    width: 20%;
+    color: #fff;
+    text-align: center;
+    float: left;
+}
+.divRoomList .divDevice .divIcon i{
+    margin-top: 3px;
+    font-size: 2em;
+    display: block;
+}
+.divRoomList .divDevice .divInfo{
+    width: 33%;
+    overflow: hidden;
+    float: left;
+}
+.divRoomList .divDevice .spanDeviceName{
+    color:#fff;
+    font-size: 0.95em;
+}
+.divRoomList .divDevice .spanDeviceSummary{
+    margin-top: 2px;
+    color:#b6b6b6;
+    font-size: 0.75em;
+}
+.divRoomList .divDevice .divControl{
+    width: 40%;
+    text-align: right;
+    float: left;
+}
+.divRoomList .divDevice i.iconC{
+    color:#f08519;
+}
+
+
+/* =======================================================
+ *  设备控制区 - 开/关、灯控/场景
+ * ======================================================= */
+ 
+.divRoomList .btnSwitch{
+    width: 30%;
+    margin-left: 63.8%;
+    text-align: right;
+}
+.divRoomGallery .btnSwitch{
+    width: 100%;
+    text-align: right;
+    margin-top: -7px;
+}
+.divDevice .divControl .btnSwitch i{
+    color:#fff;
+    font-size: 1.4em;
+    margin-right:5px;
+}
+.divDevice .divControl .btnSwitch i.iconC{
+    color:#f08519;
+}
+
+.divRoomList .divDevice .divControl .btnSwitch{
+    margin-top: 8px;
+}
+
+
+/* =======================================================
+ *  设备控制区 - 调光
+ * ======================================================= */
+.divDevice .divControl .divDimmer1{
+    width: 82%;
+    padding:0px 15% 0 9%;
+    margin-top: -10px;
+}
+.divDevice .divControl .divDimmer2{
+    width: 25%;
+    margin-top: 10px;
+    color: #fff;
+    font-size: 0.8em;
+    float: right;
+}
+
+
+/* =======================================================
+ *  设备控制区 - 窗帘
+ * ======================================================= */
+.btnCurtain{
+    width: 30%;
+    margin-left: 2.5%;
+    text-align: center;
+    margin-top: -4px;
+ }
+.divDevice .divControl .btnCurtain i{
+    color:#fff;
+    font-size: 0.7em;
+    line-height: 25px;
+}
+.divDevice .divControl .iconC i{
+    color:#f08519;
+}
+.divDevice .divControl .btnCurtain1{
+    float:left;
+}
+.divDevice .divControl .btnCurtain1 i:last-child{
+    margin-left: 0;
+}
+.divDevice .divControl .btnCurtain2{
+    width: 32%;
+    float: left;
+}
+.divDevice .divControl .btnCurtain2 i{
+    font-size: 1.1em;
+}
+.divDevice .divControl .btnCurtain3{
+    float:left
+}
+.divDevice .divControl .btnCurtain3 i:first-child{
+    margin-right: 0;
+}
+
+
+.divRoomList .divDevice .divControl .btnCurtain1{
+    text-align: center;
+}
+.divRoomList .divDevice .divControl .btnCurtain3{
+    text-align: center;
+}
+.divRoomGallery .divDevice .divControl .btnCurtain1{
+    text-align: left;
+}
+.divRoomGallery .divDevice .divControl .btnCurtain3{
+    text-align: right;
+}
+
+/* =======================================================
+ *  设备控制区 - 空调
+ * ======================================================= */
+ /* .btnAC{
+    width: 30%;
+    margin-left: 2.5%;
+    text-align: center;
+    float: left;
+    margin-top: 5px;
+ }
+ .divDevice .divControl .btnAC i{
+    color:#fff;
+}
+.divDevice .divControl .btnAC i.iconC{
+    color:#f08519;
+}
+
+.divDevice .divControl .btnAC2{
+    width:calc(39% - 10px);
+}
+.divDevice .divControl .btnAC2 i{
+    font-size: 1.6em;
+} */
+
+
+.divRoomGallery .divDevice .divControl .btnAC1{
+    text-align:left
+}
+.divRoomGallery .divDevice .divControl .btnAC3{
+    text-align:right;
+}
+.divRoomList .divDevice .divControl .btnAC1{
+    text-align:center
+}
+.divRoomList .divDevice .divControl .btnAC3{
+    text-align:center;
+}
+
+.divRoomList .divDevice .divControl .btnAC{
+    margin-top: 5px;
+}
+.divRoomList .divDevice .divControl .btnAC2{
+}
+
+/* =======================================================
+ *  设备控制区 - 空调温控器
+ * ======================================================= */
+ .divDeviceAC{
+    width: 95%;
+    margin-bottom: 5%;
+    padding: 2.5% 2.5%;
+    border-radius: 18px;
+    overflow: hidden;
+    touch-action: pan-y!important;
+    position: relative;
+    overflow: hidden;
+    height:190px;
+    background-color: #2f2f2f;
+}
+.divDeviceAC .divInfoAC{
+    height:175px;
+    margin-left: 5%;
+    width: 33%;
+    overflow: hidden;
+    float: left;
+}
+.divDeviceAC .divControlAC{
+    height:175px;
+    width:60%;
+}
+.divDeviceAC div{
+    float:left
+}
+.divDeviceLight .spanDeviceSummary{
+    height: 18px;
+}
+.divACInfoSetC{
+    font-size: 75px;
+    color:#f08519;
+    width:80%;
+    height:90px;
+    line-height:90px;
+    font-family:XcpSMGForm;
+    padding-top: 5px;
+}
+.divACInfoLabelC{
+    font-size: 15px;
+    color:#fff;
+    height:40px;
+    width:80%;
+    line-height: 40px;
+}
+.spanLabelC{
+    font-size:30px;
+    float:right;
+    color:#f08519;
+}
+.divACInfoUnitC{
+    font-size: 40px;
+    color:#f08519;
+    height:40px;
+    width:50%;
+    line-height: 40px;
+}
+.divACInfoLabelReal{
+    font-size: 15px;
+    color:#fff;
+    height:40px;
+    width:80%;
+    line-height: 40px;
+}
+.divACInfoRealC{
+    font-size: 30px;
+    color:#fff;
+    height:40px;
+    width:50%;
+}
+.btnAC{
+    height:28px;
+    color:#fff;
+    line-height: 28px;
+    text-align: center;
+    float:left;
+    width:33%;
+    font-size: 1.5em;
+    margin-top: -7px;
+}
+.btnAC1{
+    width:23%;
+}
+.btnAC2{
+    width:53%;
+}
+.btnAC3{
+    width:23%;
+}
+.drawerAC{
+    background: #252523;
+    color:#b6b6b6;
+    outline: none;
+}
+.drawerAC span{
+    display: block;
+}
+.divDrawerACTitle{
+    width: 60%;
+    left: 20%;
+    top: 57px;
+    text-align: center;
+    position: absolute;
+    height:30px;
+}
+.spanDrawerAC1{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    display: block;
+}
+.spanDrawerAC2{
+    margin-top: 4px;
+    font-size: 0.8em;
+}
+.divDrawerAC{
+    width: 100%;
+    top: 133px;
+    /* padding-top: calc((100vh - 547px) /2); */
+    text-align: center;
+    position: absolute;
+    border-top: 1px solid #f0851a;
+}
+.spanDrawerAC3{
+    font-size: 0.85em;
+    margin-top: 12px;
+}
+.spanDrawerAC4{
+    font-size: 0.85em;
+}
+.divDrawerACScreen{
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+.divDrawerACTemperature{
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    line-height: 2.5em;
+    overflow: hidden;
+}
+.divDrawerACTemperature1{
+    width: 20%;
+    font-size: 1.5em;
+    float: left;
+}
+.divDrawerACTemperature2{
+    width: 60%;
+    color: #fff;
+    font-size: 2.5em;
+    float: left;
+}
+.divDrawerACTemperature3{
+    width: 20%;
+    font-size: 1.5em;
+    float: right;
+}
+
+.divDrawerACMode{
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    line-height: 30px;
+    overflow: hidden;
+}
+.divDrawerACModeC .iconC{
+    color:#f08519;
+}
+.divDrawerACModeC .btnDeviceAcFan{
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+    padding: 0;
+    border-radius: 15px;
+    background: none;
+    border: none;
+    color: #fff;
+    display: block;
+}
+.divDrawerACModeC .btnDeviceAcFan i{
+    line-height: 30px;
+}
+.divDrawerACMode>div{
+    width: 20%;
+    text-align: center;
+    float: left;
+}
+.divDrawerACMode>div i{
+    font-size: 1.2em;
+}
+.divDrawerACMode>div i.iconC{
+    color: #f08519;
+}
+.divDrawerRadio{
+    width: 100%;
+    top: calc(15vw + 536px);
+    text-align: center;
+    position: absolute;
+}
+.btnDrawerACSwitch{
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    line-height: 40px;
+}
+.btnDrawerACSwitch i{
+    color: #fff;
+    font-size: 2em;
+}
+.btnDrawerACSwitch i.iconC{
+    color: #f08519;
+}
+.DialogPassword .el-dialog__header{
+    border-bottom: 1px solid #f08519;
+}
+.el-tree-node__content{
+    height:32px;
+}
+.el-tree-node__label{
+    font-size: 18px;
+}
+.el-popper[x-placement^=top] .popper__arrow{
+    border-top-color: #3c3c3c;
+}
+.el-popper[x-placement^=top] .popper__arrow:after {
+    border-top-color: #3c3c3c;
+}
+.popoverAC{
+    background: #3c3c3c;
+    border: solid 1px #3c3c3c;
+    color:#dfdfdf;
+    border-radius: 10px;
+}
+.popoverAC .spanTitle{
+    color: #7d7d7d;
+    font-size: 0.8em;
+}
+.popoverAC ul{
+    margin: 0;
+    margin-top: 10px;
+    padding: 0;
+    list-style-type: none;
+}
+.popoverAC ul li{
+    padding: 10px 5px;
+    border-bottom: solid 1px #565656;
+}
+.popoverAC ul li:last-child{
+    border-bottom: none;
+}
+.popoverAC ul li span{
+    margin-right: 15px;
+    padding-left: 2px;
+}
+.popoverAC ul li i{
+    margin-right: 15px;
+}
+
+
+.divDrawerHeatingMode{
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    line-height: 30px;
+    overflow: hidden;
+}
+.divDrawerHeatingMode .divDrawerACModeC .btnDeviceAcFan{
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+    padding: 0;
+    border-radius: 15px;
+    background: none;
+    border: none;
+    color: #fff;
+    display: block;
+}
+.divDrawerHeatingMode .divDrawerACModeC .btnDeviceAcFan i{
+    line-height: 30px;
+}
+.divDrawerHeatingMode>div{
+    width: 100%;
+    text-align: center;
+}
+.divDrawerHeatingMode>div i{
+    font-size: 1.2em;
+}
+.divDrawerHeatingMode>div i.iconC{
+    color: #f08519;
+}
+
+
+.divDrawerFanMode{
+    width: 40%;
+    margin: 0 auto;
+    margin-bottom: 60px;
+    line-height: 30px;
+    overflow: hidden;
+}
+.divDrawerFanMode .divDrawerACModeC .btnDeviceAcFan{
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+    padding: 0;
+    border-radius: 15px;
+    background: none;
+    border: none;
+    color: #fff;
+    display: block;
+}
+.divDrawerFanMode .divDrawerACModeC .btnDeviceAcFan i{
+    line-height: 30px;
+}
+.divDrawerFanMode>div{
+    width: 50%;
+    text-align: center;
+    float: left;
+}
+.divDrawerFanMode>div i{
+    font-size: 1.2em;
+}
+.divDrawerFanMode>div i.iconC{
+    color: #f08519;
+}
+/* =======================================================
+ *  设备控制区 - 视频监控
+ * ======================================================= */
+ .divDialogCamera{
+    position: fixed;
+    z-index: 2002;
+    width:100%;
+    height:90%;
+    bottom: 0px;
+    top:50vh;
+ }
+ .divDialogCameraHeader{
+    padding:10px 10px 10px;
+    height:40px;
+ }
+ .divDialogCameraHeader button{
+     position: absolute;
+     top: 10px;
+     right:10px;
+     background:0 0;
+     border: none;
+     outline: 0;
+     font-size: 16px;
+     color: #ffffff;
+ }
+ .drawerCamera{
+    
+    color:#dfdfdf;
+    outline: none;
+    width:100%;
+    height:100%;
+}
+.drawerCamera span{
+    color: #7d7d7d;
+    font-size: 0.8em;
+    outline: none;
+}
+.divDeviceCamera{
+    width: 100%;
+    margin-top: -20px;
+    overflow: hidden;
+}
+.divDeviceCameraTools{
+    width: 100%;
+    overflow: hidden;
+}
+.divDeviceCameraRC{
+    width: 58%;
+    margin: 0 auto;
+    margin-top: 30px;
+    border:solid 2px #362e2d;
+    border-radius: 50%;
+    position: relative;
+}
+.divDeviceCameraRCCenter{
+    width: 50%;
+    left: 25%;
+    top: 25%;
+    border:solid 1px #f08519;
+    border-radius: 50%;
+    position: absolute;
+}
+.btnDeviceCameraRC{
+    text-align: center;
+    position: absolute;
+}
+.btnDeviceCameraRC i{
+    font-size: 1.5em;
+}
+
+.divDeviceCameraBottom{
+    width: 90%;
+    bottom: 0;
+    padding: 10px 5%;
+    overflow: hidden;
+    position:absolute;
+}
+.btnDeviceCameraBottom1{
+    float: left;
+}
+.btnDeviceCameraBottom2{
+    float: right;
+}
+.btnDeviceCameraBottom1 i,.btnDeviceCameraBottom2 i{
+    font-size: 1.5em;
+}
+.divDeviceCameraBottom .active{
+    color: #f08519;
+}
+/* =======================================================
+ *  用户 - user
+ * ======================================================= */
+ .divUserTop{
+     overflow: hidden;
+     position:absolute;
+     top:35px;
+     width:100%;
+ }
+ .divUserFace{
+     width: 70px;
+     height: 70px;
+     margin-left: 6%;
+     margin-right: 4%;
+     border-radius: 35px;
+     overflow: hidden;
+     float: left;
+ }
+ .divUserFace img{
+     width: 100%;
+ }
+ .divUserInfo{
+    width: 40%;
+    padding-top: 15px;
+    float: left;
+ }
+ .divUserInfo span{
+    color: #fff;
+    display: block;
+ }
+ .spanUserInfo1{
+    margin-bottom: 4px;
+    font-size: 1em;
+    font-weight: 600;
+ }
+ .spanUserInfo2{
+    color: #adadad;
+    font-size: 0.9em;
+ }
+
+ .divUserLogin{
+    margin-right: 5vw;
+    margin-top: 16px;
+    overflow: hidden;
+    float: right;
+}
+.btnUser{
+   padding: 0px 14px;
+   border: solid 1px #fff;
+   color: #fff;
+   font-size: 0.9em;
+   border-radius: 5px;
+   overflow: hidden;
+   height:39px;
+   line-height: 39px;
+}
+
+ .divUserContent{
+    width: 100%;
+    position: absolute;
+    top:133px;
+    height:calc(100% - 133px);
+    padding:20px 6%;
+    overflow-y:scroll;
+    border-top: 1px solid #f08519;
+ }
+ .divUserContent .title{
+    margin-bottom: 15px;
+    color: #fff;
+    font-size: 0.8em;
+    display: block;
+ }
+ .divUserContent .content{
+    padding: 12px 20px;
+    color: #fff;
+    border-radius: 10px;
+    width:calc(88% - 40px);
+ }
+ .divUserContent .content ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+ }
+ .divUserContent .content ul li{
+    padding: 20.5px 5px;
+    border-bottom: solid 1px #686868;
+}
+.divUserContent .content ul li:last-child{
+    border-bottom: none;
+}
+
+.divUserContent .content ul li span{
+    margin-left: 10vw;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+.divUserContent .content ul li .divIcon{
+    float: right;
+}
+.divUserContent .content ul li i.iconC{
+    color:#f08519;
+    font-size: 22px;
+}
+.drawerBlock{
+    background: #2f2726;
+    color:#dfdfdf;
+    outline: none;
+    width:100%;
+    height:100%;
+}
+.drawerBlock span{
+    color: #7d7d7d;
+    font-size: 0.8em;
+    outline: none;
+}
+.drawerBlock ul{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 0;
+    list-style-type: none;
+}
+.drawerBlock ul li{
+    padding: 10px 10px;
+    border-bottom: solid 1px #373737;
+}
+.drawerBlock ul li:last-child{
+    border-bottom: none;
+}
+.drawerBlock ul li span{
+    margin-right: 15px;
+    padding-left: 2px;
+    color:#dfdfdf;
+    font-size: 0.9em;
+}
+.drawerBlock ul li i{
+    margin-right: 15px;
+}
+.drawerBlock ul li .checked{
+    margin-right: 0;
+    float: right;
+}
+.drawerBlock ul li .checked i{
+    margin-right: 0;
+    color: #f08519;
+    font-size: 1.2em;
+}
+
+
+.drawerTheme{
+    background: #2f2726;
+    color:#dfdfdf;
+    outline: none;
+    width:100%;
+    height:100%;
+}
+.drawerTheme span{
+    color: #7d7d7d;
+    font-size: 0.8em;
+    outline: none;
+}
+.divUserTheme{
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.divUserThemeItem{
+    width: 44%;
+    border-radius: 8px;
+    line-height: 0;
+    overflow: hidden;
+    position: relative;
+}
+.divUserThemeItem:nth-child(odd){
+    float: left;
+}
+.divUserThemeItem:nth-child(even){
+    float: right;
+}
+.divUserThemeItem img{
+    width: 100%;
+}
+.divUserThemeBoard{
+    width: 100%;
+    top:0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+    z-index: 100;
+}
+.divUserThemeIcon{
+    right: 10px;
+    bottom: 10px;
+    position: absolute;
+    z-index: 101;
+}
+.divUserThemeIcon i{
+    color: #f08519;
+    font-size: 1.5em;
+}
+.divUserThemeItemC .divUserThemeBoard{
+    display: none;
+}
+.divUserThemeItemC .divUserThemeIcon{
+    display: none;
+}
+
+
+.drawerTest{
+    background: #2f2726;
+    color:#dfdfdf;
+    outline: none;
+    width:100%;
+    height:100%;
+}
+.drawerTest span{
+    color: #7d7d7d;
+    font-size: 0.8em;
+    outline: none;
+}
+.divTabs{
+    width: 90%;
+    margin: 0 auto;
+}
+.divTabs .el-tabs__nav{
+    width: 100%;
+}
+.divTabs .el-tabs__item{
+    width: 50%;
+    color: #dfdfdf;
+    text-align: center;
+}
+.divTabs .el-tabs__item.is-active {
+    color: #f08519;
+}
+
+.formTest{
+    width: 92%;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.formTest label{
+    color: #dfdfdf;
+}
+.formTest input{
+    background: #7d7d7d;
+    border: none;
+    color: #fff;
+}
+.formTest button{
+    width: 100%;
+    padding: 15px 0;
+    left: 0;
+    bottom: 0;
+    background: #f08519;
+    border: none;
+    border-radius: 0;
+    position: fixed;
+}
+.formTest button:hover{
+    background: #f08519;
+}
+.formTest button:active{
+    background: #f08519;
+}
+.formTest button span{
+    color: #fff;
+    font-size: 1.2em;
+    letter-spacing: 10px;
+}
+
+.divSend{
+    width: 100%;
+    overflow: hidden;
+}
+.divSend input{
+    width: 76%;
+    height: 30px;
+    padding: 0 2%;
+    background: #7d7d7d;
+    border: none;
+    color: #fff;
+    font-size: 0.95em;
+    line-height: 30px;
+    outline: none;
+    float: left;
+}
+.divSend>div{
+    width: 20%;
+    height: 30px;
+    background: #f08519;
+    color: #fff;
+    text-align: center;
+    font-size: 0.8em;
+    line-height: 30px;
+    letter-spacing: 2px;
+    float: left;
+}
+.divSendMessage{
+    margin-top: 10px;
+    overflow-y: auto;
+}
+
+
+.drawerGateway{
+    background: #2f2726;
+    color:#dfdfdf;
+    outline: none;
+    width:100%;
+    height:100%;
+}
+.drawerGateway span{
+    color: #7d7d7d;
+    font-size: 0.8em;
+    outline: none;
+}
+.drawerGateway ul{
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 0;
+    list-style-type: none;
+}
+.drawerGateway ul li{
+    padding: 10px 10px;
+    border-bottom: solid 1px #373737;
+    font-size: 0.9em;
+    overflow: hidden;
+}
+.drawerGateway ul li:last-child{
+    border-bottom: none;
+}
+.drawerGateway ul li span{
+    margin-right: 15px;
+    padding-left: 2px;
+    color:#dfdfdf;
+    font-size: 0.9em;
+}
+.drawerGateway ul li i{
+    margin-right: 15px;
+}
+.divGateway1{
+    width: 25%;
+    overflow: hidden;
+    float: left;
+    text-align:center
+}
+.divGateway2{
+    width: 45%;
+    overflow: hidden;
+    float: left;
+    text-align:center
+}
+.divGateway3{
+    width: 15%;
+    overflow: hidden;
+    float:left;
+}
+.divGateway4{
+    width: 15%;
+    overflow: hidden;
+    float:left;
+    text-align:right
+}
+
+
+.drawerShareList{
+    outline: none;
+    width:100%;
+}
+.drawerShareList span{
+    color: #fff;
+    font-size: 1em;
+    outline: none;
+}
+.drawerShareList ul{
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+}
+.drawerShareList ul li{
+    padding: 5px 18px 5px 15px;
+    border-bottom: solid 1px #e3e1e1;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-size: 0.9em;
+    overflow: hidden;
+}
+.drawerShareList ul li:last-child{
+    border-bottom: none;
+}
+.drawerShareList ul li span{
+    margin-right: 15px;
+    padding-left: 2px;
+    color:#dfdfdf;
+    font-size: 0.9em;
+}
+.btnProjectCancel{
+    padding: 15px 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #f08519;
+    color: #fff;
+    text-align: center;
+    font-size: 1.2em;
+    position: fixed;
+}
+.ulScan{
+    list-style: none;
+    padding:0px;
+}
+/* =======================================================
+ *  消息 - message
+ * ======================================================= */
+.divMessage{
+    width: 92%;
+    margin: 0 auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.divMessageItem{
+    width: 94%;
+    margin-top: 10px;
+    padding: 10px 3%;
+    background: rgba(47,39,38,0.8);
+    color: #d5d5d5;
+    font-weight: normal;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+}
+.divMessageItem:last-child{
+    margin-bottom: 10px;
+}
+.divMessageItem .divTitle i{
+    margin-right: 5px;
+}
+.divMessageItem .divTitle span{
+    font-size: 0.95em;
+}
+.divMessageItem .divDate{
+    margin-top: 2px;
+    margin-bottom: 4px;
+    font-size: 0.8em;
+}
+.divMessageItem .divContent{
+    font-size: 0.9em;
+}
+.divMessageItem .btnDelete{
+    top: 10px;
+    right: 10px;
+    color: #f08519;
+    position: absolute;
+}
+.divMessageItem .btnDelete i{
+    font-size: 1.2em;
+}
+/* =======================================================
+ *  关于 - about
+ * ======================================================= */
+ .drawerAbout{
+    background: #2f2726;
+    color:#dfdfdf;
+    outline: none;
+    width:100%;
+    height:100%;
+ }
+.divAboutLogo,.divAboutAppname,.divAboutVersion{
+    width:50%;
+    text-align: center;
+    margin-left: 25%;
+    color:#bdbdbd;
+  }
+  .divAboutLogo img{
+    width:128px;
+  }
+  .divAboutAppname{
+    font-size: 2em;
+  }
+  .divAboutVersion{
+    font-size: 1.5em;
+  }
+  .hrAbout{
+    width: 96%;
+  }
+
+  .ulLog{
+    color:#ffffff;
+  }
+  .ulLog li{
+    list-style: none;
+    font-size: 1em;
+  }
+
+.tempRoom{
+    width: 100%;
+    background: red;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* =======================================================
+ *  用户登录 - login
+ * ======================================================= */
+.divLogin{
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 120px;
+}
+.divLogin .el-form-item__label{
+    color: #fff;
+}
+.divLogin .el-input__inner{
+    background: rgba(47,39,38,0.4);
+    color: #fff;
+}
+.btnRegisterC{
+    color: #fff;
+    border-bottom: solid 1px #fff;
+    line-height: 1.2;
+    float: left;
+    margin-left: calc(75vw / 2 - 84px);
+}
+.btnRegisterL{
+    color: #fff;
+    border-bottom: solid 1px #fff;
+    line-height: 1.2;
+    float: left;
+}
+.btnRegisterR{
+    color: #fff;
+    border-bottom: solid 1px #fff;
+    line-height: 1.2;
+    float: right;
+}
+
+.drawerRegister{
+    width:100%;
+    height:100%;
+    background: #2f2726;
+    color:#dfdfdf;
+    outline: none;
+}
+.drawerRegister .el-drawer__header span{
+    color: #7d7d7d;
+    font-size: 0.8em;
+    outline: none;
+}
+
+.divRegister{
+    width: 80%;
+    height:100%;
+    margin: 0 auto;
+    margin-top: 50px;
+    position: absolute;
+    top:0px;
+    background-color: #272523;
+    padding: 10%;
+    z-index: 2001;
+}
+.divRegister .el-form-item__label{
+    color: #fff;
+}
+.divRegister .el-input__inner{
+    background: rgba(47,39,38,0.4);
+    color: #fff;
+}
+
+.btnCheckcode{
+    margin-left: 15px;
+    margin-top: 10px;
+    color: #fff;
+    border-bottom: solid 1px #fff;
+    line-height: 1.2;
+    float: left;
+}
+.btnCheckcodeDisabled{
+    color:#adadad;
+}
+
+.divUserConfirm{
+    width: 80%;
+}
+
+/* =======================================================
+ *  遥控 - remote
+ * ======================================================= */
+ .divDrawerRemote{
+    width: 100%;
+    top: 90px;
+    text-align: center;
+    position: absolute;
+}
+.divDrawerRemote .row{
+    width: 75%;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    overflow: hidden;
+    position: relative;
+    height:50px;
+}
+.divDrawerRemote .rowSpace{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.divDrawerRemote .btn{
+    width: 24%;
+    padding: 0.5em 0;
+    background-color: rgba(93, 93, 93, 0.3);
+    border: solid 1px rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    font-size: 1.2em;
+}
+.divDrawerRemote .btn>div{
+    padding: 5px;
+}
+.divDrawerRemote .left{
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+.divDrawerRemote .center{
+    margin: 0 auto;
+}
+.divDrawerRemote .right{
+    top: 0;
+    right: 0;
+    position: absolute;
+}
+.divDrawerRemote span{
+    font-size: 0.8em;
+}
+
+.divDrawerRemote table{
+    width: 100%;
+    border: solid 1px rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+.divDrawerRemote table td{
+    padding: 0.5em 0;
+}
+.divDrawerRemote table td.active{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.divDrawerRemote table td:first-child{
+    border-right: solid 1px rgba(255, 255, 255, 0.3);
+}
+
+.divDrawerRemote ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.divDrawerRemote ul li{
+    padding: 0.2em 0;
+    display: inline-block;
+}
+
+.divDrawerRemote .panel{
+    margin: 20px 0 50px 0;
+}
+.divDrawerRemote .panel .tem{
+    margin-right: 5px;
+    font-size: 3em;
+}
+.divDrawerRemote .panel span{
+    display: inline-block;
+}
+
+
+/* =======================================================
+ *  设备列表 - device
+ * ======================================================= */
+ .divDeviceFooter{
+	width:100%; 
+    height:40px;
+	left:0;
+	bottom: 0; 
+	padding: 8px 0 6px 0;
+	color:#fff;
+	position: absolute;
+	z-index: 1;
+	overflow: hidden;
+}
+.divDeviceFooter ul{
+	width:100%; 
+	margin: 0;
+	padding: 0;
+	list-style-type: none; 
+}
+.divDeviceFooter ul li{
+	width:33.3%;
+    text-align: center;
+	float: left;
+}
+.divDeviceFooter ul li i{
+	margin-bottom: 3px;
+	color:#fff;
+	font-size: 25px;
+	display: block;
+}
+.divDeviceFooter ul li span{
+	color: #fff;
+	font-size: 0.8em;
+	display: block;
+}
+.divDeviceFooter ul li .routerC i{
+	color:#f08519;
+}
+.divDeviceFooter ul li .routerC span{
+	color:#f08519;
+}
+
+.divDeviceList{
+    width: 100%;
+    padding-bottom: 2px;
+    touch-action: pan-y!important; 
+    height:calc(100vh - 166px);
+}
+.divDeviceListContent{
+    width: 100%;
+    margin: 0 auto;
+    overflow: auto;
+    touch-action: pan-y!important;
+}
+.divDeviceListContent .divDevice{
+    width: 98%;
+    padding: 10px 1% 10px 1%;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    touch-action: pan-y!important; 
+}
+.divDeviceListContent .divDevice:nth-child(even){
+    margin-right: 0
+}
+.divDeviceListContent .divDevice span{
+    display: block;
+}
+.divDeviceListContent .divDevice .divIcon{
+    width: 20%;
+    color: #fff;
+    text-align: center;
+    float: left;
+}
+.divDeviceListContent .divDevice .divIcon i{
+    margin-top: 3px;
+    font-size: 2em;
+    display: block;
+}
+.divDeviceListContent .divDevice .divInfo{
+    width: 60%;
+    overflow: hidden;
+    float: left;
+}
+.divDeviceListContent .divDevice .spanDeviceName{
+    color:#fff;
+    font-size: 16px;
+}
+.divDeviceListContent .divDevice .spanDeviceSummary{
+    margin-top: 2px;
+    color:#b6b6b6;
+    font-size: 12px;
+}
+.divDeviceListContent .divDevice .divControl{
+    width: 40%;
+    text-align: right;
+    float: left;
+}
+
+.divDeviceLoading{
+    width: 100%;
+    top: 35vh;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+    position: fixed;
+    z-index: 999;
+}
+.divDeviceLoading i{
+    font-size: 3em;
+    color: #f08519;
+    display: block;
+}
+.divDeviceLoading>span{
+    margin-top: 20px;
+    margin-bottom: 20vh;
+    font-size: 0.8em;
+    color: #f08519;
+    display: block;
+}
+.divDeviceLoadingMask{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    z-index: 998;
+}
+.ulTypeRow{
+    width: 100%;
+    padding-bottom: 2px;
+    list-style: none;
+    margin-block:0px;
+    padding-inline-start: 0px;
+    margin-top: 35px;
+}
+.ulTypeRow li{
+    width: 100%;
+    padding:15px 0% 15px 0%;
+    height:50px;
+    background-color:#393939;
+    border-radius: 10px;
+    margin-bottom: 5vw;
+}
+.ulTypeRow .divIcon{
+    text-align: left;
+    width:10vw;
+    float:left;
+    color:#fff;
+    padding-left:5px;
+    height:40px;
+    line-height: 40px;
+    margin-top: 5px;
+    margin-left:5vw;
+}
+.ulTypeRow .divInfo{
+    margin-top: 4px;
+    width:35vw;
+    float:left;
+    color:#fff;
+}
+.ulTypeRow .spanDeviceName{
+    width:56vw;
+    height:25px;
+    line-height: 25px;
+    font-size: 16px;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    -o-text-overflow:ellipsis;
+    overflow:hidden;
+}
+.ulTypeRow .spanDeviceSummary{
+    color:#b6b6b6;
+    font-size: 12px;
+    width:50vw;
+    height:15px;
+    line-height: 15px;
+}
+
+/* =======================================================
+ *  添加设备 - addDevice
+ * ======================================================= */
+ .tabsAddDevice .el-tabs--border-card{
+    background: rgba(47,39,38,0.8);
+    border: 1px solid #686868;
+    color: #fff;
+ }
+ .tabsAddDevice .el-tabs--border-card>.el-tabs__header{
+    background: rgba(0,0,0,0.8);
+    border-bottom: solid 1px #686868;;
+ }
+ .tabsAddDevice .el-tabs--left.el-tabs--border-card .el-tabs__header.is-left{
+    border-right: 1px solid #686868;
+ }
+ .tabsAddDevice .el-tabs--border-card>.el-tabs__header .el-tabs__item.is-active{
+    background-color: rgba(47,39,38,0.8);
+ }
+ .tabsAddDevice .el-tabs--left.el-tabs--border-card .el-tabs__item.is-left.is-active{
+    border-color: #686868 transparent;
+}
+
+.ulAddDeviceType{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.ulAddDeviceType li{
+    width: 35%;
+    margin-top: 5%;
+    margin-right: 5%;
+    padding: 2.5% 4%;
+    border: solid 1px #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    float: left;
+}
+.ulAddDeviceType li>div{
+    width: 100%;
+    padding: 15% 0 15% 0;
+    text-align: center;
+}
+.ulAddDeviceType li>div i{
+    font-size: 2.5em;
+}
+.ulAddDeviceType li>div span{
+    margin-top: 5px;
+    display: block;
+    font-size: 0.8em;
+}
+
+.divFormAddDevice .el-form-item{
+    margin-bottom: 0;
+}
+.divFormAddDevice .el-form--label-top .el-form-item__label{
+    padding-bottom: 0;
+}
+
+.divFormAddDeviceChannel{
+    margin-top: 22px;
+    padding: 10px 0;
+    background:#f5f5f5;
+}
+.divFormAddDeviceChannel:last-child{
+    margin-bottom: 0;
+}
+.divFormAddDeviceChannel .el-form-item:last-child{
+    margin-bottom: 0;
+}
+
+.divLogicList{
+    height:calc(100vh - 208px);
+    overflow-y:scroll;
+}
+
+.el-drawer__wrapper{
+    bottom:64px;
+}
+.switchRight{
+    float:right;margin-right:-5px;height:55px
+}
+.spanTabHeader{
+    /* font-size: 3vw; */
+}
+.pickerTimer{
+    width:40%;margin-top: -5px;
+}
+.pickerAutomation{
+    float:left;width:32%;margin-top: -5px;
+}
+.divSecureSwitchLeft{
+    margin-left:1vw
+}
+.divSecureSwitchCenter{
+    margin-left:11vw;margin-right:11vw
+}
+.divSecureSwitchRight{
+    margin-right:1vw
+}

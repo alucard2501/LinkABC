@@ -1,0 +1,347 @@
+
+/* 基本框架 */
+body {
+  margin: 0;
+  font-family: "微软雅黑", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #fff;
+  background: #0d1931;
+}
+#page {
+  width: 100%;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  position: relative;
+}
+a {
+  -moz-transition: 0.3s;
+  -o-transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: #333;
+}
+a:hover {
+  text-decoration: none
+}
+a:focus {
+  outline: 0 solid
+}
+p {
+  line-height: 26px;
+}
+h1, h2, h3, h4, h5, h6, figure {
+  color: #000;
+  font-family: "微软雅黑", Arial, sans-serif;
+  font-weight: 400;
+  margin: 0 0 20px 0;
+}
+.animate-box {
+  opacity: 0;
+}
+.disableLongTap{
+	-webkit-touch-callout:none;/*系统默认菜单被禁用*/
+	-webkit-user-select:none;/*webkit浏览器*/
+	-khtml-user-select:none;/*早起浏览器*/
+	-moz-user-select:none;/*火狐浏览器*/
+	-ms-user-select:none;/*IE浏览器*/
+	user-select:none;/*用户是否能够选中文本*/
+ }
+.divBg{
+  width: 100%;
+  top: 0;
+  left: 0;
+  line-height: 0;
+  position: absolute;
+  z-index: -1;
+}
+.divBg img{
+  width: 100%;
+}
+.btn{
+  text-decoration: none; 
+  display: block; 
+  -webkit-tap-highlight-color:transparent;
+}
+.divImg{
+  width: 100%;
+  line-height: 0;
+  overflow: hidden;
+  position: absolute;
+}
+.divImg img{
+  width: 100%;
+}
+
+.divMask, .divTips{
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 10;
+  overflow: hidden;
+}
+.divMask img{
+  width: 100%;
+}
+
+/* 首页 */
+.btnIndexSkip{
+  width: 20%;
+  top: 0;
+  right: 0;
+  position: absolute;
+  z-index: 100;
+}
+
+.btnIndex{
+  position: absolute;
+  z-index: 100;
+}
+.btnIndex1{
+  width: 62%;
+  left: 19%;
+}
+.btnIndex2{
+  width: 40.5%;
+  left: 7.4%;
+}
+.btnIndex3{
+  width: 40.5%;
+  right: 7.4%;
+}
+
+/* 卫星观测 */
+.btnSatelliteSkip{
+  width: 20%;
+  top: 0;
+  right: 0;
+  position: absolute;
+  z-index: 100;
+}
+.btnSatelliteEnter{
+  width: 50.5%;
+  left: 25%;
+  position: absolute;
+  z-index: 100;
+}
+
+.btnSatellite{
+  width: 24.5%;
+  position: absolute;
+  z-index: 100;
+}
+.btnSatellite1{
+  left: 23.6%;
+}
+.btnSatellite2{
+  right: 23.6%;
+}
+
+.btnSatelliteBack{
+  width: 24%;
+  left:38%;
+  position: absolute;
+  z-index: 100;
+}
+
+.divSatelliteForm{
+  width: 100%;
+  left: 0;
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+  position: absolute;
+}
+.divSatelliteForm p{
+  margin: 0;
+  line-height: 2;
+}
+.divSatelliteForm p span.text{
+  padding: 0 0.5em;
+  color:#699eff;
+  font-size: 1.3em;
+  font-weight: 600;
+  background-image:-webkit-linear-gradient(bottom,#a4ebf6,#699eff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.inputName{
+  width: 22.2%;
+  margin: 0 4px;
+  padding: 0 4px;
+  background: transparent;
+  border: 0;
+  border-bottom: solid 1px #4ea0f4;
+  color: #a4ebf6;
+  /* background-image:-webkit-linear-gradient(bottom,#a4ebf6,#699eff); */
+  -webkit-background-clip:text;
+  /* -webkit-text-fill-color:transparent; */
+  font-size: 1.3em;
+  font-weight: 600;
+  outline: none;
+}
+
+.divSatelliteInfo{
+  width: 100%;
+  text-align: center;
+  font-size: 0.8em;
+  position: absolute;
+  z-index: 10;
+}
+.divSatelliteInfo p{
+  margin: 0;
+  line-height: 1.5;
+}
+.divServerRank{
+  width: 90%;
+  left:5%;
+  text-align: center;
+  font-size: 0.8em;
+  position: absolute;
+  z-index: 10;
+  overflow: auto;
+}
+.divServerRank p{
+  margin: 0;
+  line-height: 1.5;
+}
+
+
+.btnSatelliteInfoClose{
+  width: 30%;
+  left:35%;
+  position: absolute;
+  z-index: 100;
+}
+
+.divSatelliteArrow{
+  width: 30%;
+  position: absolute;
+  z-index: 100;
+}
+.divSatelliteArrow img{
+  width: 100%;
+}
+.divSatelliteArrow1{
+  left: 18%;
+  z-index: 103;
+}
+.divSatelliteArrow2{
+  right: 18%;
+}
+.btnSatelliteCard{
+  width: 23.9%;
+  left: 22%;
+}
+.btnSatelliteCard2{
+    width: 23.9%;
+    left: 22%;
+    z-index: 102;
+}
+.divInfoTitle{
+  position:absolute;
+  z-index: 100;
+  width: 30%;
+  left: 35%;
+}
+.divServerWord{
+  position:absolute;
+  z-index: 100;
+  width: 70%;
+  left: 15%;
+  font-size: 0.9em;
+  text-align: center;
+}
+.spanServerInfo{
+  color:#82cbf6;
+}
+.spanT1{
+  width:40%;
+  display:inline-table;
+  text-align:left
+}
+.spanT2{
+  text-align:left
+}
+/* 海报 */
+.divPosterInfo{
+  width: 100%;
+  text-align: center;
+  font-size: 0.8em;
+  position: absolute;
+  z-index: 10;
+  color: #ffffff;
+}
+.divPosterInfo p{
+  margin: 0;
+  line-height: 1.5;
+}
+.divPosterInfo p span{
+  padding: 0 0.5em;
+  color:#a4ebf6;
+  font-size: 1.0em;
+  font-weight: 600;
+  /* background-image:-webkit-linear-gradient(bottom,#a4ebf6,#699eff); */
+  -webkit-background-clip:text;
+  /* -webkit-text-fill-color:transparent; */
+}
+.divPosterQRTips{
+  width: 23%;
+  left:68%;
+  text-align: center;
+  font-size: 0.7em;
+  position: absolute;
+  z-index: 10;
+  color: #ffffff;
+}
+
+.divQrcode{
+  width: 16%;
+  left:72%;
+  position: absolute;
+  z-index: 10;
+}
+.divQrcode img{
+  width: 100%;
+}
+
+.btnPoster{
+  position: absolute;
+  z-index: 101;
+}
+.btnPoster img{
+  width: 100%;
+}
+.btnPosterLink{
+  width: 100%;
+  left:0;
+}
+.btnPosterBack{
+  width: 24%;
+  left:39%;
+}
+.btnPosterCard{
+  width: 23.9%;
+  left: 10%;
+}
+.btnPosterCard2{
+  width: 23.9%;
+  left: 10%;
+  z-index: 100;
+}
+.btnPosterCard3{
+  width: 23.9%;
+  left: 5%;
+  z-index: 100;
+}
+
+.divImageDebug{
+  background-image: url(../images/img_debug.png);
+  background-repeat:no-repeat;
+  background-size:100% 100%;
+  -moz-background-size:100% 100%;
+}

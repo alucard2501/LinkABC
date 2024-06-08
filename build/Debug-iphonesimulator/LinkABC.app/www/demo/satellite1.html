@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <title>战在苍穹之颠</title>
+    <meta id="keywords" name="keywords" content="战在苍穹之颠,梦幻西游" />
+    <meta id="description" name="description" content="战在苍穹之颠,梦幻西游。" />
+
+    <link href="images/favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" type="text/css" href="css/jquery_ui.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="css/jquery_colorbox.css" media="screen" />
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery_ui.js"></script>
+    <script type="text/javascript" src="js/jquery_combobox.js"></script>
+    <script type="text/javascript" src="js/alert.js"></script>
+    <script type="text/javascript" src="js/bluebird.js"></script>
+    <script type="text/javascript" src="js/html2canvas.min.js"></script>
+    <script type="text/javascript" src="js/sys_config_string.js"></script>
+    <script type="text/javascript" src="js/pages/main.js"></script>
+    <script type="text/javascript" src="js/pages/satellite.js"></script>
+</head>
+<body>
+    <audio id="alarm">
+      <source src="images/d.mp3">
+    </audio>
+    <div class="loading"></div>
+    <div id="page">
+      <div class="divBg js-bg"><img src=""></div>
+      <div class="js-loading" style="overflow: hidden;height:100%;display: none;">
+        <div class="btn btnSatelliteSkip js-skip"></div>
+        <div class="btn btnSatelliteEnter js-enter"></div>
+        <div id="DivImgWord" class="divImg js-words" style="z-index: 11;"><img src=""></div>
+        <div class="divMask"><img id="ImgMask" src=""></div>
+      </div>
+      <div class="js-main" >
+        <!-- <div class="btn btnSatellite btnSatellite1 "></div> -->
+        <div class="btn btnSatellite btnSatellite2 js-btn-poster"></div>
+        <div class="btn btnSatelliteBack js-btn-back"></div>
+        <div class="divSatelliteForm js-form">
+          <p>我的位置
+            <input id="Select_Position" type="text" class="inputName" readonly style="width:60%">
+            <!-- <select id="Select_Position" style="width:60%">
+              <option value="">请选择...</option>
+            </select> -->
+          </p>
+          <p>当前时间:<span id="Span_Time" class="text">2020年12月16日 16:00</span></p>
+          <p>我是来自<select id="Select_Server">
+            <option value="">请选择...</option>
+            <option value="东北区">东北区</option>
+            <option value="华南区">华南区</option>
+          </select>服务器的<input id="Input_Name" type="text" class="inputName"></p>
+          <p>我正在为<select id="Select_Server1">
+            <option value="紫禁城">紫禁城</option>
+            <option value="珍宝阁">珍宝阁</option>
+            <option value="钓鱼岛">钓鱼岛</option>
+            <option value="明秀园">明秀园</option>
+            <option value="姑苏城">姑苏城</option>
+            <option value="西栅老街">西栅老街</option>
+            <option value="曲阜孔庙">曲阜孔庙</option>
+            <option value="普陀山">普陀山</option>
+          </select>服务器的天命之人应援，<br />助威武神坛全明星争霸赛</p>
+          <!-- <p id="PWord2">天命之人正在距离你公里的地方，即刻应援，共战蚩尤</p> -->
+          <p id="PWord1" style="display: none;">天命之人正在距离你<span id="Span_Distance" class="text">18880.9</span> 公里的地方，即刻应援，共战蚩尤</p>
+        </div>
+        <div class="divImg js-people"><img src="images/people.png"></div>
+        <div class="divSatelliteArrow divSatelliteArrow1 js-arrow1" style="display: none;"><img src="images/arrow1.png"></div>
+        <div class="divSatelliteArrow divSatelliteArrow2 js-arrow2" style="display: none;"><img src="images/arrow2.png"></div>
+        <div class="btnSatelliteCard btnPoster js-btn-card js-btn-info" style="z-index: 101;"><img src="images/poster_sd.png"></div>
+        <div class="btnSatelliteCard2 btnPoster js-btn-card-bg" style="z-index: 100;"><img src="images/poster_sd_bg.png"></div>
+      </div>
+      <div class="js-info" style="display: none;">
+        <div class="divImg"><img src="images/bg_satellite_info.jpg"></div>
+        <div class="divInfoTitle js-title1"><img src="images/satellite_title1.png" style="width: 100%;" /></div>
+        <div class="divInfoTitle js-title2" style="display: none;"><img src="images/satellite_title2.png" style="width: 100%;" /></div>
+        <div class="btn btnSatelliteInfoClose js-btn-close"><img src="images/satellite_back.png" style="width: 100%;" /></div>
+        <div class="btn btnSatelliteInfoClose js-btn-server" ><img src="images/satellite_rank.png" style="width: 100%;" /></div>
+        <div class="btn btnSatelliteInfoClose js-btn-satellite" style="display: none;"><img src="images/satellite_location.png" style="width: 100%;" /></div>
+        <div class="divSatelliteInfo">
+          <p style="line-height: 1.7;">武神坛前夕<br/>
+            蚩尤元神出窍隐匿于苍穹之巅<br/>
+            企图召唤邪魂分身破除战神山封印<br/>
+            为阻止蚩尤破除封印，保护三界众生<br/>
+            最强天命人被召集前往苍穹之颠迎战<br/>
+            唐王号召三界侠士不遗余力千里应援<br/>
+            共同助力天命人<br/>
+            </p>
+        </div>
+        <div class="divServerRank js-info-server" style="display: none;">
+          <p>XXXX服务器 1234次</p>
+          <p>XXXX服务器 1234次</p>
+          <p>XXXX服务器 1234次</p>
+          <p>XXXX服务器 1234次</p>
+          <p>XXXX服务器 1234次</p>
+          <p>XXXX服务器 1234次</p>
+          <p>XXXX服务器 1234次</p>
+          <p>XXXX服务器 1234次</p>
+          <p>XXXX服务器 1234次</p>
+          <p>XXXX服务器 1234次</p>
+          <p>XXXX服务器 1234次</p>
+          <p>XXXX服务器 1234次</p>
+          <p>XXXX服务器 1234次</p>
+          <p>XXXX服务器 1234次</p>
+          <p>XXXX服务器 1234次</p>
+          <p>XXXX服务器 1234次</p>
+          <p>XXXX服务器 1234次</p>
+          <p>XXXX服务器 1234次</p>
+          <p>XXXX服务器 1234次</p>
+          <p>XXXX服务器 1234次</p>
+          <p>XXXX服务器 1234次</p>
+        </div>
+        <div class="divServerWord js-info-rank">
+          您正在为<span class="spanServerInfo" id="SpanServerName">XXXX</span>的天命之人应援，<br />
+          它目前排在第<span class="spanServerInfo" id="SpanRank">n</span>位
+          <!-- 您是第<span id="SpanCount">NNNN</span>位<span id="SpanServerName">XXXX</span>服务器的天命人应援的玩家<br />
+          您的服务器目前在应援总榜上排名第<span id="SpanRank">RRRR</span><br />
+          赶紧查看总榜，提升它的排位吧 -->
+        </div>
+      </div>
+    </div>
+    
+
+    
+    
+</body>
+</html>
+

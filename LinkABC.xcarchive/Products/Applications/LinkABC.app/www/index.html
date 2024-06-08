@@ -1,0 +1,25 @@
+<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"><title>LinkABC</title><script type=text/javascript>var networkinterface=null;</script><script type=text/javascript src=cordova.js></script><script type=text/javascript src=cordova_plugins.js></script><script type=text/javascript src=https://res.wx.qq.com/open/js/jweixin-1.4.0.js></script><link rel=stylesheet id=style_element href=static/css/element-ui.css><link rel=stylesheet href=static/css/icomoon.css><link rel=stylesheet href=static/fonts/XcpSMGForm.css><link rel=stylesheet id=style_main href=static/css/style.css><link rel=stylesheet id=style href=static/css/style1.css><link href=./static/css/app.3bdebab97fde4892b5210e4f294803ab.css rel=stylesheet></head><body><div id=app></div><script type=text/javascript src=./static/js/manifest.3ad1d5771e9b13dbdad2.js></script><script type=text/javascript src=./static/js/vendor.1c67bac8711528461895.js></script><script type=text/javascript src=./static/js/app.c826ef53e149a83b856e.js></script></body><script type=text/javascript>// 缩放
+    try {
+      // 禁用双击缩放
+      document.addEventListener("touchstart", function(event) {
+        if (event.touches.length > 1) {
+          event.preventDefault();
+        }
+      });
+      var lastTouchEnd = 0;
+      document.addEventListener(
+        "touchend",
+        function(event) {
+          var now = new Date().getTime();
+          if (now - lastTouchEnd <= 300) {
+            event.preventDefault();
+          }
+          lastTouchEnd = now;
+        },
+        false
+      );
+      // 禁用双指手势操作
+      document.addEventListener("gesturestart", function(event) {
+        event.preventDefault();
+      });
+    } catch (error) {}</script></html>

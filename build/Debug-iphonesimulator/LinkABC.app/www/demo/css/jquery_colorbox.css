@@ -1,0 +1,35 @@
+  .custom-combobox {
+    width: 35%;
+    margin: 0 4px;
+    font-size: 1em;
+    position: relative;
+    display: inline-block;
+  }
+  .custom-combobox:last-child {
+    width: 60%;
+  }
+  .custom-combobox-toggle {
+    width: 1.3em;
+    background:url("../images/ico_arrow.png") no-repeat;
+    background-size: 100%;
+    background-position:center center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    padding: 0;
+  }
+  .custom-combobox-input {
+    width: 100%;
+    background: transparent;
+    border: 0;
+    border-bottom: solid 1px #4ea0f4;
+    color: #a4ebf6;
+    /* background-image:-webkit-linear-gradient(bottom,#a4ebf6,#699eff); */
+    -webkit-background-clip:text;
+    /* -webkit-text-fill-color:transparent; */
+    font-size:0.8em;
+    font-weight: 600;
+    border-radius: 0;
+    outline: none;
+  }
