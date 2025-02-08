@@ -475,6 +475,7 @@ h1, h2, h3, h4, h5, h6, figure {
     height:80px;
     background-color: #3c3d3f;
     float: left;
+    margin-left:3px;
 }
 .divRoomGallery .divDeviceSelect{
     background-color:rgba(240,133,26,0.3);
@@ -484,7 +485,7 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 .divRoomGallery .divDevice:nth-child(odd){
     margin-right: 0;
-    margin-left: 3px;
+    margin-left: 0px;
 }
 .divRoomGallery .divDevice span{
     text-align: left;
